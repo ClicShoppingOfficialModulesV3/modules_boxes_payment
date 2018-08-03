@@ -1,6 +1,6 @@
 <?php
 /**
- * bm_payment.php 
+ * bm_payment.php
  * @copyright Copyright 2008 - http://www.innov-concept.com
  * @Brand : ClicShopping(Tm) at Inpi all right Reserved
  * @license GPL 2 License & MIT Licence
@@ -9,8 +9,6 @@
 
   use ClicShopping\OM\Registry;
   use ClicShopping\OM\CLICSHOPPING;
-
-  use ClicShopping\Apps\Marketing\BannerManager\Classes\Shop\Banner;
 
   class bm_payment {
     public $code;
@@ -193,10 +191,10 @@
     }
 
     public function  keys() {
-      return array('MODULE_BOXES_PAYMENT_STATUS', 
+      return array('MODULE_BOXES_PAYMENT_STATUS',
                    'MODULE_BOXES_PAYMENT_CONTENT_PLACEMENT',
                    'MODULE_BOXES_PAYMENT_BANNER_GROUP',
-                   'MODULE_BOXES_PAYMENT_URL_BANK', 
+                   'MODULE_BOXES_PAYMENT_URL_BANK',
                    'MODULE_BOXES_PAYMENT_IMAGE_BANK',
                    'MODULE_BOXES_PAYMENT_URL_SHIPPING',
                    'MODULE_BOXES_PAYMENT_IMAGE_SHIPPING',
