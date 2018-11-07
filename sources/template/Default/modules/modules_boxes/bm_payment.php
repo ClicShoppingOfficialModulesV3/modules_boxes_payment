@@ -1,9 +1,9 @@
 <?php
 /**
  * bm_payment.php
- * @copyright Copyright 2008 - http://www.innov-concept.com
+ * @copyright 2008 - https://www.clicshopping.org
  * @Brand : ClicShopping(Tm) at Inpi all right Reserved
- * @license GPL 2 License & MIT Licence
+ * @license GPL 2 & MIT
 
 */
 
@@ -130,7 +130,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez indiquer l\'url du site du fournisseur effectuant l\'exp&eacute;dition principale du produit',
+          'configuration_title' => 'Veuillez indiquer l\'url du site du fournisseur effectuant l\'expédition principale du produit',
           'configuration_key' => 'MODULE_BOXES_PAYMENT_URL_SHIPPING',
           'configuration_value' => '',
           'configuration_description' => 'Veuillez insérer un url du type http://www.expediteur.com',
@@ -142,7 +142,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez indiquer le nom de l\'image du logo de du fournisseur effectuant l\'exp&eacute;dition principale du produit',
+          'configuration_title' => 'Veuillez indiquer le nom de l\'image du logo de du fournisseur effectuant l\'expédition principale du produit',
           'configuration_key' => 'MODULE_BOXES_PAYMENT_IMAGE_SHIPPING',
           'configuration_value' => '',
           'configuration_description' => 'Les logos se trouvent dans la section image du site :  image/logos/shipping/',
