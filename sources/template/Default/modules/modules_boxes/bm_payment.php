@@ -45,13 +45,15 @@
       if ($CLICSHOPPING_Service->isStarted('Banner') ) {
         if ($banner = $CLICSHOPPING_Banner->bannerExists('dynamic',  MODULE_BOXES_PAYMENT_BANNER_GROUP)) {
           $logo_banner_payment = $CLICSHOPPING_Banner->displayBanner('static', $banner) . '<br /><br />';
+        } else {
+          $logo_banner_payment = '';
         }
       }
 
       $data = '<!-- boxe payment / shipping start-->' . "\n";
 
       ob_start();
-      require($CLICSHOPPING_Template->getTemplateModules('/modules_boxes/content/payment'));
+      require_once($CLICSHOPPING_Template->getTemplateModules('/modules_boxes/content/payment'));
 
       $data .= ob_get_clean();
 
