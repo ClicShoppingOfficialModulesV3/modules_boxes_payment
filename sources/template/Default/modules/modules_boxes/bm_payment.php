@@ -42,6 +42,9 @@
       $CLICSHOPPING_Service = Registry::get('Service');
       $CLICSHOPPING_Banner = Registry::get('Banner');
 
+      if (!empty(MODULE_BOXES_PAYMENT_IMAGE_BANK) && !empty(MODULE_BOXES_PAYMENT_IMAGE_SHIPPING)) {
+      $logo_banner_payment = '';
+
       if ($CLICSHOPPING_Service->isStarted('Banner') ) {
         if ($banner = $CLICSHOPPING_Banner->bannerExists('dynamic',  MODULE_BOXES_PAYMENT_BANNER_GROUP)) {
           $logo_banner_payment = $CLICSHOPPING_Banner->displayBanner('static', $banner) . '<br /><br />';
@@ -50,16 +53,17 @@
         }
       }
 
-      $data = '<!-- boxe payment / shipping start-->' . "\n";
+        $data = '<!-- boxe payment / shipping start-->' . "\n";
 
-      ob_start();
-      require_once($CLICSHOPPING_Template->getTemplateModules('/modules_boxes/content/payment'));
+        ob_start();
+        require_once($CLICSHOPPING_Template->getTemplateModules('/modules_boxes/content/payment'));
 
-      $data .= ob_get_clean();
+        $data .= ob_get_clean();
 
-      $data .='<!-- Boxe categories end -->' . "\n";
+        $data .='<!-- Boxe categories end -->' . "\n";
 
-      $CLICSHOPPING_Template->addBlock($data, $this->group);
+        $CLICSHOPPING_Template->addBlock($data, $this->group);
+      }
     }
 
     public function  isEnabled() {
