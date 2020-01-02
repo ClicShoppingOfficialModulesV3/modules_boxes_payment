@@ -1,0 +1,3 @@
+module_boxes_payment_title = Souhaitez-vous afficher la boxe avec les logos de paiement et expédition ?
+module_boxes_payment_description = Affiche la boxe avec les logos des paiement et expédition dans la boutique
+module_boxes_payment_box_title = Certifications

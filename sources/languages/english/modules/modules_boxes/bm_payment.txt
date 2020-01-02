@@ -1,0 +1,5 @@
+
+ module_boxes_payment_title = Do  you want to display the payment / shipping boxe with the logos ?
+ module_boxes_payment_description = Display the shipping and payment boxe with the logos in the catalog
+
+ module_boxes_payment_box_title = Certifications
