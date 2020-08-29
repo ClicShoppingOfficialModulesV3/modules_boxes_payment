@@ -15,10 +15,10 @@
   class bm_payment {
     public $code;
     public $group;
-    public $title;
-    public $description;
-    public $sort_order;
-    public $enabled = false;
+    public string $title;
+    public string $description;
+    public ?int $sort_order = 0;
+    public bool $enabled = false;
     public $pages;
 
     public function  __construct() {
@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_boxes_payment_title');
       $this->description = CLICSHOPPING::getDef('module_boxes_payment_description');
 
-      if ( defined('MODULE_BOXES_PAYMENT_STATUS') ) {
+      if (defined('MODULE_BOXES_PAYMENT_STATUS')) {
         $this->sort_order = MODULE_BOXES_PAYMENT_SORT_ORDER;
         $this->enabled = (MODULE_BOXES_PAYMENT_STATUS == 'True');
         $this->pages = MODULE_BOXES_PAYMENT_DISPLAY_PAGES;
@@ -45,7 +45,7 @@
       if (!empty(MODULE_BOXES_PAYMENT_IMAGE_BANK) && !empty(MODULE_BOXES_PAYMENT_IMAGE_SHIPPING)) {
         $logo_banner_payment = '';
 
-        if ($CLICSHOPPING_Service->isStarted('Banner') ) {
+        if ($CLICSHOPPING_Service->isStarted('Banner')) {
           if ($banner = $CLICSHOPPING_Banner->bannerExists('dynamic',  MODULE_BOXES_PAYMENT_BANNER_GROUP)) {
             $logo_banner_payment = $CLICSHOPPING_Banner->displayBanner('static', $banner) . '<br /><br />';
           }
