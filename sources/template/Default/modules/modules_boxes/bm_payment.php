@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_boxes_payment_title');
       $this->description = CLICSHOPPING::getDef('module_boxes_payment_description');
 
-      if (defined('MODULE_BOXES_PAYMENT_STATUS')) {
+      if (\defined('MODULE_BOXES_PAYMENT_STATUS')) {
         $this->sort_order = MODULE_BOXES_PAYMENT_SORT_ORDER;
         $this->enabled = (MODULE_BOXES_PAYMENT_STATUS == 'True');
         $this->pages = MODULE_BOXES_PAYMENT_DISPLAY_PAGES;
@@ -69,7 +69,7 @@
     }
 
     public function  check() {
-      return defined('MODULE_BOXES_PAYMENT_STATUS');
+      return \defined('MODULE_BOXES_PAYMENT_STATUS');
     }
 
     public function  install() {
